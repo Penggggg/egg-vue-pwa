@@ -1,8 +1,12 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import { Controller } from 'egg';
 
 const Vue = require('vue');
 const vueSSR = require('vue-server-renderer');
-const renderer = vueSSR.createRenderer( );
+const renderer = vueSSR.createRenderer({
+  template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8')
+});
 
 export default class HomeController extends Controller {
 
@@ -21,7 +25,7 @@ export default class HomeController extends Controller {
     });
 
     try {
-      const html = await renderer.renderToString( app );
+      const html = await renderer.renderToString( app, { title: 'asdasdasd' });
       ctx.body = html;
     } catch ( e ) {
       ctx.body = e;
