@@ -18,13 +18,16 @@
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
     "lint": "tslint .",
-    "clean": "ets clean"
+    "clean": "ets clean",
+    "build:server": "webpack --config ./config/webpack.server.conf.js"
   },
   "dependencies": {
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",
     "vue": "^2.5.16",
-    "vue-server-renderer": "^2.5.16"
+    "vue-server-renderer": "^2.5.16",
+    "webpack-merge": "^4.1.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
@@ -32,13 +35,18 @@
     "@types/supertest": "^2.0.0",
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
-    "egg-ci": "^1.8.0",
     "egg-bin": "^4.6.2",
+    "egg-ci": "^1.8.0",
     "egg-mock": "^3.16.0",
     "egg-ts-helper": "^1.4.2",
     "tslib": "^1.9.0",
     "tslint": "^4.0.0",
-    "typescript": "^2.8.1"
+    "typescript": "^2.8.1",
+    "vue-loader": "^15.2.2",
+    "vue-loading": "^0.1.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
   },
   "engines": {
     "node": ">=8.9.0"

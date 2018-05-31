@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Controller } from 'egg';
-import { createApp } from '../web/render';
+import serverApp from '../web/entry-server';
  
 const Vue = require('vue');
 const vueSSR = require('vue-server-renderer');
@@ -18,7 +18,7 @@ export default class HomeController extends Controller {
 
   public async tovue( ) {
     const { ctx } = this;
-    const app = createApp({ url: ctx.url });
+    const app = serverApp({ url: ctx.url });
 
     try {
       const html = await renderer.renderToString( app, { title: 'asdasdasd' });
