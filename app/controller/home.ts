@@ -1,7 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Controller } from 'egg';
-
+import { createApp } from '../web/render';
+ 
 const Vue = require('vue');
 const vueSSR = require('vue-server-renderer');
 const renderer = vueSSR.createRenderer({
@@ -17,12 +18,7 @@ export default class HomeController extends Controller {
 
   public async tovue( ) {
     const { ctx } = this;
-    const app = new Vue({
-      data: {
-        url: ctx.url,
-      },
-      template: `<div>访问的 URL 是： {{ url }}</div>`
-    });
+    const app = createApp({ url: ctx.url });
 
     try {
       const html = await renderer.renderToString( app, { title: 'asdasdasd' });
