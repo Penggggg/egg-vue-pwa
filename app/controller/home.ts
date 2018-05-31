@@ -5,7 +5,10 @@ import serverApp from '../web/entry-server';
  
 const Vue = require('vue');
 const vueSSR = require('vue-server-renderer');
-const renderer = vueSSR.createRenderer({
+// const renderer = vueSSR.createRenderer({
+//   template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8')
+// });
+const renderer = vueSSR.createBundleRenderer( path.join( __dirname, '../../dist/page/vue-ssr-server-bundle.json'), {
   template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8')
 });
 
@@ -18,10 +21,10 @@ export default class HomeController extends Controller {
 
   public async tovue( ) {
     const { ctx } = this;
-    const app = serverApp({ url: ctx.url });
+    // const app = serverApp({ url: ctx.url });
 
     try {
-      const html = await renderer.renderToString( app, { title: 'asdasdasd' });
+      const html = await renderer.renderToString({ title: 'asdasdasd' });
       ctx.body = html;
     } catch ( e ) {
       ctx.body = e;
