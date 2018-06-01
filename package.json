@@ -26,6 +26,7 @@
     "egg": "^2.8.1",
     "egg-scripts": "^2.6.0",
     "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.16",
     "webpack-merge": "^4.1.2",
     "webpack-node-externals": "^1.7.2"

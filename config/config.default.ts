@@ -25,7 +25,11 @@ export default (appInfo: EggAppInfo) => {
   config.static = {
     prefix: '/dist/',
     dir: path.join( appInfo.baseDir, 'dist')
-  }
+  };
+
+  config.srrCachePage = {
+    moduleX: [ ]
+  };
 
   return config;
 };
