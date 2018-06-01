@@ -1,18 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Controller } from 'egg';
-import serverApp from '../web/entry-server';
  
 const vueSSR = require('vue-server-renderer');
-
-const serverBundle = require( path.join( __dirname, '../../dist/vue-ssr-server-bundle.json'));
-const clientManifest = require( path.join( __dirname, '../../dist/vue-ssr-client-manifest.json'));
-
-const renderer = vueSSR.createBundleRenderer( serverBundle, {
-  clientManifest,
-  runInNewContext: false,
-  template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8'),
-});
 
 export default class HomeController extends Controller {
 
@@ -23,7 +13,14 @@ export default class HomeController extends Controller {
 
   public async tovue( ) {
     const { ctx } = this;
-    // const app = serverApp({ url: ctx.url });
+    const serverBundle = require( path.join( __dirname, '../../dist/vue-ssr-server-bundle.json'));
+    const clientManifest = require( path.join( __dirname, '../../dist/vue-ssr-client-manifest.json'));
+
+    const renderer = vueSSR.createBundleRenderer( serverBundle, {
+      clientManifest,
+      runInNewContext: false,
+      template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8'),
+    });
 
     try {
       const html = await renderer.renderToString({ title: 'asdasdasd' });

@@ -19,8 +19,8 @@
     "autod": "autod",
     "lint": "tslint .",
     "clean": "ets clean",
-    "build:server": "webpack --config ./config/webpack.server.conf.js",
-    "build:client": "webpack --config ./config/webpack.client.conf.js"
+    "build:server": "webpack --colors --progress --config ./config/webpack.server.conf.js",
+    "build:client": "webpack --colors --progress --config ./config/webpack.client.conf.js"
   },
   "dependencies": {
     "egg": "^2.8.1",
@@ -52,7 +52,8 @@
     "vue-style-loader": "^4.1.0",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.12.0",
-    "webpack-cli": "^2.1.4"
+    "webpack-cli": "^2.1.4",
+    "yargs": "^11.0.0"
   },
   "engines": {
     "node": ">=8.9.0"
