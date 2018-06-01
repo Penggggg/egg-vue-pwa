@@ -3,7 +3,6 @@ import * as path from 'path';
 import { Controller } from 'egg';
 import serverApp from '../web/entry-server';
  
-const Vue = require('vue');
 const vueSSR = require('vue-server-renderer');
 
 const serverBundle = require( path.join( __dirname, '../../dist/vue-ssr-server-bundle.json'));
