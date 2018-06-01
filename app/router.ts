@@ -5,4 +5,5 @@ export default (app: Application) => {
 
   router.get('/', controller.home.index);
   router.get('/app(/.+)?', controller.home.tovue);
+  router.get('/moduleX(/.+)?', controller.home.moduleX );
 };
