@@ -11,25 +11,6 @@ export default class HomeController extends Controller {
     ctx.body = await ctx.service.test.sayHi('egg');
   }
 
-  public async tovue( ) {
-    const { ctx } = this;
-    const serverBundle = require( path.join( __dirname, '../../dist/vue-ssr-server-bundle.json'));
-    const clientManifest = require( path.join( __dirname, '../../dist/vue-ssr-client-manifest.json'));
-
-    const renderer = vueSSR.createBundleRenderer( serverBundle, {
-      clientManifest,
-      runInNewContext: false,
-      template: fs.readFileSync( path.join( __dirname, '../web/index.template.html'), 'utf-8'),
-    });
-
-    try {
-      const html = await renderer.renderToString({ title: 'asdasdasd' });
-      ctx.body = html;
-    } catch ( e ) {
-      ctx.body = e;
-    }
-  }
-
   public async moduleX( ) {
     const { ctx } = this;
     const serverBundle = require( path.join( __dirname, '../../dist/moduleX/vue-ssr-server-bundle.json'));

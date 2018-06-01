@@ -1,9 +1,9 @@
 import { Application } from 'egg';
+import { moduleXRoter } from './controller/moduleX/router';
 
 export default (app: Application) => {
   const { controller, router } = app;
 
-  router.get('/', controller.home.index);
-  router.get('/app(/.+)?', controller.home.tovue);
-  router.get('/moduleX(/.+)?', controller.home.moduleX );
+  moduleXRoter( app );
+
 };
