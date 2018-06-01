@@ -1,10 +1,11 @@
 <template>
     <div class="title">123123</div>
 </template>
-<script>
+<script lang="ts">
 export default {
     created( ) {
-        console.log('created!!!!');
+        const s: string = 'created!!!!'
+        console.log( s );
     },
     mounted( ) {
         console.log('mounted!!!!');

@@ -1,14 +1,15 @@
 {
-  "extends": "../../config/tsconfig.json",
   "compilerOptions": {
+    "strict": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
     "lib": [
-      "es6",
-      "dom"
+      "es2017",
+      "dom",
+      "scripthost"
     ]
-  },
- 
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  }
 }
