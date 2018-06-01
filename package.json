@@ -23,7 +23,7 @@
     "build:client": "webpack --config ./config/webpack.client.conf.js"
   },
   "dependencies": {
-    "egg": "^2.6.1",
+    "egg": "^2.8.1",
     "egg-scripts": "^2.6.0",
     "vue": "^2.5.16",
     "vue-server-renderer": "^2.5.16",

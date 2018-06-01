@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
 
 // for config.{env}.ts
@@ -20,6 +21,11 @@ export default (appInfo: EggAppInfo) => {
 
   // add your config here
   config.middleware = [];
+
+  config.static = {
+    prefix: '/dist/',
+    dir: path.join( appInfo.baseDir, 'dist')
+  }
 
   return config;
 };
