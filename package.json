@@ -19,7 +19,8 @@
     "autod": "autod",
     "lint": "tslint .",
     "clean": "ets clean",
-    "build:server": "webpack --config ./config/webpack.server.conf.js"
+    "build:server": "webpack --config ./config/webpack.server.conf.js",
+    "build:client": "webpack --config ./config/webpack.client.conf.js"
   },
   "dependencies": {
     "egg": "^2.6.1",
@@ -45,7 +46,7 @@
     "vue-loader": "^15.2.2",
     "vue-loading": "^0.1.4",
     "vue-template-compiler": "^2.5.16",
-    "webpack": "^4.10.2",
+    "webpack": "^3.12.0",
     "webpack-cli": "^2.1.4"
   },
   "engines": {
