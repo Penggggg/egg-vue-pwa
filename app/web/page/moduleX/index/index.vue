@@ -12,7 +12,7 @@
 import moduleXStore from '../../../store/moduleX';
 export default {
     asyncData({ store }) {
-        store.registerModule('moduleX', moduleXStore );
+        return store.registerModule( 'moduleX', moduleXStore );
     },
     data( ) {
         return {
@@ -24,6 +24,9 @@ export default {
     },
     mounted( ) {
         setTimeout(( ) => this.show = false, 5000 );
+    },
+    destroyed () {
+        this.$store.unregisterModule('moduleX')
     }
 } as any;
 </script>

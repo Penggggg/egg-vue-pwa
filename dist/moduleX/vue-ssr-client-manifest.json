@@ -1,7 +1,7 @@
 {
   "publicPath": "/dist/moduleX/",
   "all": [
-    "chunk-0.c403d302242dcd97af21.js",
+    "chunk-0.c2add6e78edb78e90bfd.js",
     "chunk-1.cd0ff03d180968aa15fc.js",
     "chunk-2.0893a0e04d84d6b164ce.js",
     "app.js",
@@ -14,7 +14,7 @@
     "app.js"
   ],
   "async": [
-    "chunk-0.c403d302242dcd97af21.js",
+    "chunk-0.c2add6e78edb78e90bfd.js",
     "chunk-1.cd0ff03d180968aa15fc.js",
     "chunk-2.0893a0e04d84d6b164ce.js"
   ],
