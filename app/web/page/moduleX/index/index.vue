@@ -1,17 +1,27 @@
 <template>
-    <h1 class="title">
+    <div>
+        <h1 class="title">
         我是moduleX的index
-    </h1>
+        </h1>
+        <router-link to="/moduleX/list">列表</router-link>
+        <h2 v-if="show">我是骨架</h2>
+        <router-view></router-view>
+    </div>
 </template>
 <script lang="ts">
 export default {
+    data( ) {
+        return {
+            show: true
+        };
+    },
     created( ) {
-        console.log('我是moduleX的index cccccccc');
+
     },
     mounted( ) {
-        console.log('我是moduleX的index mmmmmmmm');
+        setTimeout(( ) => this.show = false, 5000 );
     }
-};
+} as any;
 </script>
 <style lang="less" scoped>
 @import './index.less';

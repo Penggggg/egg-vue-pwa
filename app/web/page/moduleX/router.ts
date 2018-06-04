@@ -1,6 +1,5 @@
 const Vue = require('vue');
 const VueRouter = require('vue-router');
-import Index from './index/index.vue';
 
 Vue.use( VueRouter );
 
@@ -12,7 +11,17 @@ export const createRouter = ( ) => {
         routes: [
             {
                 path: `${base}/`,
-                component: Index
+                component: ( ) => import('./index/index.vue'),
+                children: [
+                    {
+                        path: 'list',
+                        component: ( ) => import('./list/index.vue'),
+                    },
+                    {
+                        path: 'detail',
+                        component: ( ) => import('./detail/index.vue')
+                    }
+                ]
             }
         ]
     });

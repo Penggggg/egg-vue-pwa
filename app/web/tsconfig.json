@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "strict": true,
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2015",
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "lib": [
