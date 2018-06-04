@@ -1,3 +1,5 @@
+import { resolve } from 'dns';
+
 const Vue = require('vue');
 const VueRouter = require('vue-router');
 
@@ -11,16 +13,15 @@ export const createRouter = ( ) => {
         routes: [
             {
                 path: `${base}/`,
-                component: ( ) => import('./index/index.vue'),
+                component: resolve => require(['./index/index.vue'], resolve),
                 children: [
                     {
                         path: 'list',
-                        component: ( ) => import('./list/index.vue')
-                        // component: r => require.ensure([], ( ) => r(require('./list/index.vue'), 'c1'))
+                        component: resolve => require(['./list/index.vue'], resolve)
                     },
                     {
                         path: 'detail',
-                        component: ( ) => import('./detail/index.vue')
+                        component: resolve => require(['./detail/index.vue'], resolve)
                     }
                 ]
             }
