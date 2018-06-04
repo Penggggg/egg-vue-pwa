@@ -10,6 +10,7 @@ export default class ModuleXCtl extends Controller {
 
     const { ctx } = this;
     try {
+
       const serverBundle = require( path.join( __dirname, '../../../dist/moduleX/vue-ssr-server-bundle.json'));
       const clientManifest = require( path.join( __dirname, '../../../dist/moduleX/vue-ssr-client-manifest.json'));
 

@@ -20,7 +20,7 @@ export const createRouter = ( ) => {
                         component: resolve => require(['./list/index.vue'], resolve)
                     },
                     {
-                        path: 'detail',
+                        path: 'detail/:id',
                         component: resolve => require(['./detail/index.vue'], resolve)
                     }
                 ]
