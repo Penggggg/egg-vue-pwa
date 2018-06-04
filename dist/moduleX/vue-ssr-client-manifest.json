@@ -1,9 +1,9 @@
 {
   "publicPath": "/dist/moduleX/",
   "all": [
-    "chunk-0.aba3bbfa530b1ead9c27.js",
-    "chunk-1.64e7e4e68f662ff4b191.js",
-    "chunk-2.bdafd8b0ef9350fdb3fe.js",
+    "chunk-0.7ce2a0f6d8b624c88c24.js",
+    "chunk-1.3f8ca10980a8c038b870.js",
+    "chunk-2.c30dedec3360d4ac91b7.js",
     "app.js",
     "vendor.js",
     "manifest.js"
@@ -14,9 +14,9 @@
     "app.js"
   ],
   "async": [
-    "chunk-0.aba3bbfa530b1ead9c27.js",
-    "chunk-1.64e7e4e68f662ff4b191.js",
-    "chunk-2.bdafd8b0ef9350fdb3fe.js"
+    "chunk-0.7ce2a0f6d8b624c88c24.js",
+    "chunk-1.3f8ca10980a8c038b870.js",
+    "chunk-2.c30dedec3360d4ac91b7.js"
   ],
   "modules": {
     "736a734b": [
@@ -26,6 +26,9 @@
       4
     ],
     "8639cfd6": [
+      4
+    ],
+    "307f1742": [
       4
     ],
     "07226bc4": [
@@ -70,6 +73,9 @@
     "4ff9e787": [
       3
     ],
+    "8d992d04": [
+      3
+    ],
     "3bfbbe69": [
       3
     ],
@@ -82,7 +88,13 @@
     "03508e93": [
       3
     ],
-    "bedf79f2": [
+    "f209678a": [
+      3
+    ],
+    "45054b2a": [
+      3
+    ],
+    "c7e43daa": [
       4
     ],
     "e7ea2ce0": [
