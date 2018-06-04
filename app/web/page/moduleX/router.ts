@@ -15,7 +15,8 @@ export const createRouter = ( ) => {
                 children: [
                     {
                         path: 'list',
-                        component: ( ) => import('./list/index.vue'),
+                        component: ( ) => import('./list/index.vue')
+                        // component: r => require.ensure([], ( ) => r(require('./list/index.vue'), 'c1'))
                     },
                     {
                         path: 'detail',
