@@ -1,5 +1,5 @@
 {
-  "publicPath": "/dist/moduleX",
+  "publicPath": "/dist/moduleX/",
   "all": [
     "main.js",
     "manifest.js"

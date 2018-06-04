@@ -4,12 +4,14 @@ import Index from './index/index.vue';
 
 Vue.use( VueRouter );
 
+const base = '/moduleX';
+
 export const createRouter = ( ) => {
     return new VueRouter({
         mode: 'history',
         routes: [
             {
-                path: '/',
+                path: `${base}/`,
                 component: Index
             }
         ]
