@@ -21,6 +21,20 @@ export const createRouter = ( ) => {
                     },
                     {
                         path: 'detail/:id',
+                        component: resolve => require(['./detail/index.vue'], resolve),
+                        children: [
+                            {
+                                path: ':sex',
+                                component: resolve => require(['./detail/index.vue'], resolve),
+                            }
+                        ]
+                    },
+                    {
+                        path: 'haha/:id/xixi/:sex',
+                        component: resolve => require(['./detail/index.vue'], resolve)
+                    },
+                    {
+                        path: 'xixi/:id/:sex',
                         component: resolve => require(['./detail/index.vue'], resolve)
                     }
                 ]

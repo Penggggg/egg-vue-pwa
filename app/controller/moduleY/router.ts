@@ -1,14 +1,14 @@
 import { Application } from 'egg';
 
-const baseUrl = '/moduleX';
+const baseUrl = '/moduleY';
 
 /**
  * @param { GET /moduleX/:any } 渲染
  */
-export const moduleXRoter = ( app: Application ) => {
+export const moduleYRoter = ( app: Application ) => {
     const { router, controller } = app;
     if ( !!router && !!controller ) {
-        router.get(`${baseUrl}(/.+)?`, controller.moduleX.index.render );
+        router.get(`${baseUrl}(/.+)?`, controller.moduleY.index.render );
     }
     return;
 };

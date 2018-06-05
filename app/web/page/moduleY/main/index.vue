@@ -1,16 +1,14 @@
 <template>
     <div>
-        <h1>我是detail</h1>
-        <a href="/moduleY">moduleY</a>
+        <router-view></router-view>
     </div>
 </template>
 <script lang="ts">
 export default {
 
-}
+} as any;
 </script>
 <style lang="less" scoped>
-@import './index.less';
-</style>
 
+</style>
 
