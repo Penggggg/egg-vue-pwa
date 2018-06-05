@@ -1,12 +1,13 @@
 import { Context, Service } from 'egg';
 import pageCahe from './page';
 
-export default class LRUCache extends Service {
+/**
+ * ! 编写时，发现egg里面的service并不是单利模式，而是每调用一次，创建一个服务实例..
+ */
+class LRUCache {
 
     public page = new pageCahe( );
 
-    constructor( ctx: Context ) {
-        super( ctx );
-    }
-
 };
+
+export const cache = new LRUCache( );
