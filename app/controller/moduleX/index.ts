@@ -20,9 +20,11 @@ export default class ModuleXCtl extends Controller {
         template: fs.readFileSync( path.join( __dirname, '../../web/page/moduleX/index.template.html'), 'utf-8'),
       });
 
-      const html = await renderer.renderToString({ title: 'moduleX', url: ctx.url });
-      console.log( html );
+      const html = await renderer.renderToString({ title: 'moduleX', url: ctx.url, cb: matchedPath => {
+
+      }});
       ctx.body = html;
+
     } catch ( e ) {
       ctx.body = e;
     }
